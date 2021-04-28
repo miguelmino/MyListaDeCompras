@@ -104,3 +104,20 @@ should also regularly review and apply any available patches or associated secur
 advisories for dependencies used within your application.
 
 Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
+
+
+### install java
+
+sudo apt install -y openjdk-8-jdk
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+
+sudo alternatives --config java
+sudo alternatives --config javac
+
+
+### install mvn
+
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
